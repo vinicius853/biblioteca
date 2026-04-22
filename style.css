@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #eef2f7;
+  color: #1f2937;
+}
+
+.hero {
+  background: linear-gradient(135deg, #14532d, #166534, #1d4ed8);
+  color: white;
+  padding: 42px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.info-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.info-card,
+.card,
+.book-card,
+.receipt,
+.history-item {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.info-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #166534;
+}
+
+.info-label {
+  display: block;
+  margin-top: 6px;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 1.45rem;
+}
+
+.field,
+select,
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.book-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.book-content {
+  padding: 16px;
+}
+
+.badge {
+  display: inline-block;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.book-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-size: 0.93rem;
+  line-height: 1.55;
+  margin: 4px 0;
+  word-break: break-word;
+}
+
+.available {
+  color: #15803d;
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 0.92rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+.btn-primary {
+  background: #2563eb;
+}
+
+.btn-success {
+  background: #166534;
+  width: 100%;
+}
+
+.btn-danger {
+  background: #dc2626;
+}
+
+.btn-secondary {
+  background: #334155;
+}
+
+.cart-item,
+.receipt-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 14px;
+  background: #f9fafb;
+}
+
+.cart-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-top img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.92rem;
+}
+
+.return-date {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1d4ed8;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.empty {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.alert-success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: none;
+}
+
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.receipt-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.receipts-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.receipt {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+
+.receipt h3 {
+  margin: 18px 0 10px;
+  font-size: 1.1rem;
+}
+
+.history-item {
+  padding: 14px;
+  margin-top: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.95rem;
+  }
+
+  .info-bar,
+  .layout,
+  .receipts-area {
+    grid-template-columns: 1fr;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-top img {
+    width: 140px;
+    height: 180px;
+  }
+
+  .receipt-header,
+  .receipt-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn,
+  .btn-danger,
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 90px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media print {
+  .hero,
+  .info-bar,
+  .search-section,
+  .catalog-section,
+  .cart-section,
+  .reader-section,
+  .history-section,
+  .receipt-buttons,
+  #alertSuccess {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .container,
+  .card {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .receipts-area {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .receipt {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

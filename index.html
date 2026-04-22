@@ -1,13 +1,94 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>biblioteca</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leitura Ágape</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="logo-container">
+      <img src="logo.png" alt="Leitura Ágape" class="logo" />
+    </div>
+
+    <h1>Leitura Ágape</h1>
+
+    <p>
+      Plataforma de empréstimo de livros da Igreja Menonita Ágape, com controle
+      de locação, devolução e comprovantes para o leitor e para o sistema.
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="info-bar">
+      <div class="info-card">
+        <span class="info-number" id="totalCatalogo">0</span>
+        <span class="info-label">Livros no catálogo</span>
+      </div>
+      <div class="info-card">
+        <span class="info-number" id="totalCarrinhoTopo">0</span>
+        <span class="info-label">Itens no carrinho</span>
+      </div>
+      <div class="info-card">
+        <span class="info-number" id="totalLocacoesTopo">0</span>
+        <span class="info-label">Locações registradas</span>
+      </div>
+    </section>
+
+    <div class="alert-success" id="alertSuccess"></div>
+
+    <section class="layout">
+      <div>
+        <section class="card search-section">
+          <h2>Buscar livros</h2>
+          <input id="busca" type="text" placeholder="Buscar por título, autor ou categoria" />
+          <select id="categoria"></select>
+        </section>
+
+        <section class="catalog-section">
+          <div class="books-grid" id="listaLivros"></div>
+        </section>
+      </div>
+
+      <div>
+        <section class="card cart-section">
+          <h2>Carrinho de aluguel</h2>
+          <p class="text">Total de livros: <strong id="totalCarrinho">0</strong></p>
+          <div id="listaCarrinho"></div>
+        </section>
+
+        <section class="card reader-section">
+          <h2>Dados do leitor</h2>
+          <input id="nomeLeitor" type="text" placeholder="Nome completo" />
+          <input id="emailLeitor" type="email" placeholder="E-mail" />
+          <input id="telefoneLeitor" type="text" placeholder="Telefone" />
+          <button class="btn btn-success" id="btnFinalizar">Finalizar locação</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="card" id="areaComprovantes" style="display: none;">
+      <div class="receipt-header">
+        <h2>Comprovantes gerados</h2>
+        <div class="receipt-buttons">
+          <button class="btn btn-primary" id="btnImprimir">Imprimir</button>
+          <button class="btn btn-danger" id="btnLimparComprovante">Limpar comprovante</button>
+        </div>
+      </div>
+
+      <div class="receipts-area">
+        <div class="receipt" id="comprovanteLeitor"></div>
+        <div class="receipt" id="comprovanteSistema"></div>
+      </div>
+    </section>
+
+    <section class="card history-section">
+      <h2>Histórico de locações</h2>
+      <div id="listaHistorico"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
